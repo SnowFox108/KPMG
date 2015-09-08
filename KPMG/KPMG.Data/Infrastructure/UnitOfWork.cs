@@ -17,9 +17,9 @@ namespace KPMG.Data.Infrastructure
             get { return _contentContext; }
         }
 
-        public UnitOfWork(): this(new ContentContext())
-        {            
-        }
+        //public UnitOfWork(): this(new ContentContext())
+        //{            
+        //}
 
         public UnitOfWork(IContentContext contentContext)
         {

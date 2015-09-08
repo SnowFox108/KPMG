@@ -4,7 +4,7 @@ using KPMG.Infrasructure.Data.Model;
 
 namespace KPMG.Core.Services
 {
-    public interface ITransactionService
+    public interface ITransactionDataService
     {
         IEnumerable<TransactionData> GetTransactionData(TransactionDataSearchFilter filter);
     }

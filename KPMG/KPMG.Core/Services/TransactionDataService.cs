@@ -6,9 +6,9 @@ using KPMG.Infrasructure.Helper;
 
 namespace KPMG.Core.Services
 {
-    public class TransactionService : BaseService, ITransactionService
+    public class TransactionDataService : BaseService, ITransactionDataService
     {
-        protected TransactionService(IUnitOfWork unitOfWork) : base(unitOfWork)
+        public TransactionDataService(IUnitOfWork unitOfWork) : base(unitOfWork)
         {
         }
 

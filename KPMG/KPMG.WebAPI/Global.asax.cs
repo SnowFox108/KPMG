@@ -13,6 +13,8 @@ namespace KPMG.WebAPI
     {
         protected void Application_Start()
         {
+
+            AutofacConfig.RegisterBinding();
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
