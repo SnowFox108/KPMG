@@ -55,14 +55,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\KPMG.Infrasructure\KPMG.Infrasructure.csproj">
-      <Project>{f0f6e931-5981-437a-b85b-ccf117f413e8}</Project>
-      <Name>KPMG.Infrasructure</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KPMG.Infrastructure\KPMG.Infrastructure.csproj">
+      <Project>{f63b3e2c-5e9b-46a1-81a8-9463d9a1fa44}</Project>
+      <Name>KPMG.Infrastructure</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

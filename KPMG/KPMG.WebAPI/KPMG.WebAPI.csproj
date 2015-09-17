@@ -183,12 +183,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Infrasructure\AutofacContainer.cs" />
-    <Compile Include="Infrasructure\AutofacFacotry.cs" />
-    <Compile Include="Infrasructure\AutoFacRegister\BaseRegister.cs" />
-    <Compile Include="Infrasructure\AutoFacRegister\CommandRegister.cs" />
-    <Compile Include="Infrasructure\AutoFacRegister\CommonRegister.cs" />
-    <Compile Include="Infrasructure\AutoFacRegister\ServiceRegister.cs" />
+    <Compile Include="Infrastructure\AutofacContainer.cs" />
+    <Compile Include="Infrastructure\AutofacFacotry.cs" />
+    <Compile Include="Infrastructure\AutoFacRegister\BaseRegister.cs" />
+    <Compile Include="Infrastructure\AutoFacRegister\CommandRegister.cs" />
+    <Compile Include="Infrastructure\AutoFacRegister\CommonRegister.cs" />
+    <Compile Include="Infrastructure\AutoFacRegister\ServiceRegister.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -261,9 +261,9 @@
       <Project>{710627dc-4e1b-40fe-bc7a-4f076da83bea}</Project>
       <Name>KPMG.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\KPMG.Infrasructure\KPMG.Infrasructure.csproj">
-      <Project>{f0f6e931-5981-437a-b85b-ccf117f413e8}</Project>
-      <Name>KPMG.Infrasructure</Name>
+    <ProjectReference Include="..\KPMG.Infrastructure\KPMG.Infrastructure.csproj">
+      <Project>{f63b3e2c-5e9b-46a1-81a8-9463d9a1fa44}</Project>
+      <Name>KPMG.Infrastructure</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

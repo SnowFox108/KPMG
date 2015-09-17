@@ -1,4 +1,4 @@
-﻿using KPMG.Infrasructure.Data.Infrasructure;
+﻿using KPMG.Infrastructure.Data.Infrasructure;
 
 namespace KPMG.Core.Services
 {

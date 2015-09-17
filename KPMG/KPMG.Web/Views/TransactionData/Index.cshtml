@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Transaction Data List</h2>
+<div ng-controller="transactionData" ng-init="init()">
+    <table class="table table-striped table-bordered table-hover flip-content">
+        <thead class="flip-content">
+            <tr>
+                <th width="6%">
+
+                </th>
+                <th width="10%" class="sortable-column" ng-click="sortOrderSetPage('Account')">
+                    Account <i class="fa pull-right" ng-class="table.Account"></i>
+                </th>
+                <th width="40%">
+                    Description <i class="fa pull-right" ng-class="table.Description"></i>
+                </th>
+                <th width="10%" class="sortable-column" ng-click="sortOrderSetPage('CurrencyCode')">
+                    Currency Code <i class="fa pull-right" ng-class="table.CurrencyCode"></i>
+                </th>
+                <th width="10%" class="sortable-column" ng-click="sortOrderSetPage('Amount')">
+                    Amount <i class="fa pull-right" ng-class="table.Amount"></i>
+                </th>
+                <th width="24%">
+                    Actions
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="odd gradeX" ng-repeat="item in model.TransactionData">
+                <td></td>
+                <td>
+                    {{ item.Account }}
+                </td>
+                <td>
+                    {{ item.Description }}
+                </td>
+                <td>
+                    {{ item.CurrencyCode }}
+                </td>
+                <td>
+                    {{ item.Amount }}
+                </td>
+                <td>
+                    <a class="label label-danger label-sm" href="" ng-click="deleteTransactionData(item)" title="{{ item.Account }}"><i class="fa fa-trash"></i> Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="row">
+        @Html.Partial("/Views/Shared/_Pagination.cshtml")
+    </div>
+</div>
+
+@section scripts{
+    <script src="/Angular/Controllers/transaction-data-index.js"></script>
+}

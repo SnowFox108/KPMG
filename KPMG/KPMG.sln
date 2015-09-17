@@ -5,13 +5,13 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KPMG.Data", "KPMG.Data\KPMG.Data.csproj", "{710627DC-4E1B-40FE-BC7A-4F076DA83BEA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KPMG.Infrasructure", "KPMG.Infrasructure\KPMG.Infrasructure.csproj", "{F0F6E931-5981-437A-B85B-CCF117F413E8}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KPMG.Core", "KPMG.Core\KPMG.Core.csproj", "{EA9108B1-6C18-49E7-96FA-EEBF005470CA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KPMG.WebAPI", "KPMG.WebAPI\KPMG.WebAPI.csproj", "{B7ACAF4E-E438-4A14-81AE-C7817943E04A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KPMG.Web", "KPMG.Web\KPMG.Web.csproj", "{F8B76E4D-AA7B-4B99-A9F4-1F4DED2B2EB8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KPMG.Infrastructure", "KPMG.Infrastructure\KPMG.Infrastructure.csproj", "{F63B3E2C-5E9B-46A1-81A8-9463D9A1FA44}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,6 @@ Global
 		{710627DC-4E1B-40FE-BC7A-4F076DA83BEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{710627DC-4E1B-40FE-BC7A-4F076DA83BEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{710627DC-4E1B-40FE-BC7A-4F076DA83BEA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F0F6E931-5981-437A-B85B-CCF117F413E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F0F6E931-5981-437A-B85B-CCF117F413E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F0F6E931-5981-437A-B85B-CCF117F413E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F0F6E931-5981-437A-B85B-CCF117F413E8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EA9108B1-6C18-49E7-96FA-EEBF005470CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EA9108B1-6C18-49E7-96FA-EEBF005470CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA9108B1-6C18-49E7-96FA-EEBF005470CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +35,10 @@ Global
 		{F8B76E4D-AA7B-4B99-A9F4-1F4DED2B2EB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8B76E4D-AA7B-4B99-A9F4-1F4DED2B2EB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8B76E4D-AA7B-4B99-A9F4-1F4DED2B2EB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F63B3E2C-5E9B-46A1-81A8-9463D9A1FA44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F63B3E2C-5E9B-46A1-81A8-9463D9A1FA44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F63B3E2C-5E9B-46A1-81A8-9463D9A1FA44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F63B3E2C-5E9B-46A1-81A8-9463D9A1FA44}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

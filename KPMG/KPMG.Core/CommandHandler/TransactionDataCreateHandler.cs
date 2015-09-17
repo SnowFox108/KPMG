@@ -1,7 +1,7 @@
 ﻿using KPMG.Core.Command;
-using KPMG.Infrasructure.Command;
-using KPMG.Infrasructure.Data.Entity;
-using KPMG.Infrasructure.Data.Infrasructure;
+using KPMG.Infrastructure.Command;
+using KPMG.Infrastructure.Data.Entity;
+using KPMG.Infrastructure.Data.Infrasructure;
 
 namespace KPMG.Core.CommandHandler
 {

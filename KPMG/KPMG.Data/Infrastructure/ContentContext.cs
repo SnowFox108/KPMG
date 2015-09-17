@@ -1,6 +1,6 @@
 ﻿using System.Data.Entity;
-using KPMG.Infrasructure.Data.Entity;
-using KPMG.Infrasructure.Data.Infrasructure;
+using KPMG.Infrastructure.Data.Entity;
+using KPMG.Infrastructure.Data.Infrasructure;
 
 namespace KPMG.Data.Infrastructure
 {

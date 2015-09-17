@@ -43,7 +43,9 @@
   <ItemGroup>
     <Compile Include="CommandHandler\TransactionDataCreateHandler.cs" />
     <Compile Include="Command\DefaultCommandBus.cs" />
+    <Compile Include="CommandHandler\DefaultCommandHandlerFactory.cs" />
     <Compile Include="Command\TransactionDataCreateCommand.cs" />
+    <Compile Include="Model\TransactionDataModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\BaseService.cs" />
     <Compile Include="Services\ITransactionDataService.cs" />
@@ -54,9 +56,9 @@
       <Project>{710627dc-4e1b-40fe-bc7a-4f076da83bea}</Project>
       <Name>KPMG.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\KPMG.Infrasructure\KPMG.Infrasructure.csproj">
-      <Project>{f0f6e931-5981-437a-b85b-ccf117f413e8}</Project>
-      <Name>KPMG.Infrasructure</Name>
+    <ProjectReference Include="..\KPMG.Infrastructure\KPMG.Infrastructure.csproj">
+      <Project>{f63b3e2c-5e9b-46a1-81a8-9463d9a1fa44}</Project>
+      <Name>KPMG.Infrastructure</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,14 +1,21 @@
 ﻿using System;
+using System.IO;
+using System.Linq;
+using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
 using KPMG.Core.Command;
+using KPMG.Core.Model;
 using KPMG.Core.Services;
-using KPMG.Infrasructure.Command;
-using KPMG.Infrasructure.Data.Model;
-using KPMG.Infrasructure.Helper;
+using KPMG.Infrastructure.Command;
+using KPMG.Infrastructure.Data.Model;
+using KPMG.Infrastructure.Data.Pagination;
+using KPMG.Infrastructure.Helper;
 
 namespace KPMG.WebAPI.Controllers
 {
+    [RoutePrefix("api/TransactionData")]
     public class TransactionDataController : ApiController
     {
         private readonly ITransactionDataService _transactionService;
@@ -20,12 +27,25 @@ namespace KPMG.WebAPI.Controllers
             _commandBus = commandBus;
         }
 
-        [ResponseType(typeof(TransactionDataDto))]
-        public IHttpActionResult Get(TransactionDataSearchFilter searchFilter)
+        [ResponseType(typeof(TransactionDataModel))]
+        [HttpPost]
+        [Route("Search")]
+        public IHttpActionResult Search(TransactionDataSearchFilter searchFilter)
         {
             try
             {
-                return Ok(_transactionService.GetTransactionData(searchFilter).MapTo<TransactionDataDto>());
+                var model = new TransactionDataModel
+                {
+                    TransactionData = _transactionService.GetTransactionData(searchFilter).MapTo<TransactionDataDto>(),
+                    Paging = new PaginationModel
+                    {
+                        TotalItems = _transactionService.GetTransactionDataCount(searchFilter),
+                        ItemsPerPage = searchFilter.Filter.Paging.ItemsPerPage,
+                        CurrentPage = searchFilter.Filter.Paging.CurrentPage
+                    }
+                };
+
+                return Ok(model);
             }
             catch (Exception ex)
             {
@@ -46,8 +66,27 @@ namespace KPMG.WebAPI.Controllers
             }
             catch (Exception ex)
             {
-
                 return InternalServerError(ex);
+            }
+        }
+
+        [HttpPut]
+        public async Task Put(int id, HttpRequestMessage request)
+        {
+            if (!Request.Content.IsMimeMultipartContent())
+                throw new InvalidOperationException();
+
+            var provider = new MultipartMemoryStreamProvider();
+            await Request.Content.ReadAsMultipartAsync(provider);
+
+            var file = provider.Contents.First();
+            var filename = file.Headers.ContentDisposition.FileName.Trim('\"');
+            var buffer = await file.ReadAsByteArrayAsync();
+            var stream = new MemoryStream(buffer);
+
+            using (var s = new StreamReader(stream))
+            {
+                var test = s;
             }
         }
     }

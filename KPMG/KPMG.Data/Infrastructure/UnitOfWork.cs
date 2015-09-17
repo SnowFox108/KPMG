@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Data.Entity.Validation;
 using System.Linq;
-using KPMG.Infrasructure.Data.Infrasructure;
+using KPMG.Infrastructure.Data.Infrasructure;
 
 namespace KPMG.Data.Infrastructure
 {

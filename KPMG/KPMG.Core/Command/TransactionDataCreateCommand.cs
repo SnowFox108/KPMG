@@ -1,4 +1,4 @@
-﻿using KPMG.Infrasructure.Command;
+﻿using KPMG.Infrastructure.Command;
 
 namespace KPMG.Core.Command
 {
